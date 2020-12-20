@@ -9,7 +9,7 @@ let playerSelection = function () {
 }
 
 let playRound = function () {
-    let playerSelection = prompt("rock, paper, scissors?");
+    let playerSelection = prompt("rock, paper, scissors?").toLowerCase();
 
     if(playerSelection === "rock"){
         switch(computerPlay()){
@@ -50,10 +50,6 @@ let playRound = function () {
         } else {
             console.log("invalid option");
         }
-    
-
-    
-
-   
+     
 
 }
