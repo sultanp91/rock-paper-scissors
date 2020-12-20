@@ -8,48 +8,66 @@ let playerSelection = function () {
     prompt("Rock? Paper? Scissors? Which will it be?");
 }
 
+let playerScore = 0;
+let computerScore = 0;
+
 let playRound = function () {
     let playerSelection = prompt("rock, paper, scissors?").toLowerCase();
 
     if(playerSelection === "rock"){
         switch(computerPlay()){
             case "rock": 
-                console.log("draw");
+                return "draw";
                 break;
             case "paper":
-                console.log("paper beats rock");
+                computerScore++;
+                return "YOU LOSE! Paper beats rock";
                 break;
             case "scissors":
-                console.log("rock beats paper");
+                playerScore++;
+                return "YOU WIN! Rock beats scissors";
         }
     } else if(playerSelection === "paper"){
         switch(computerPlay()){
             case "rock": 
-                console.log("paper beats rock");
+                playerScore++;           
+                return "YOU WIN. Paper beats rock";
                 break;
             case "paper":
-                console.log("draw");
+                return "draw";
                 break;
             case "scissors":
-                console.log("scissors beats paper");
+                computerScore++;
+                return "YOU LOSE! Scissors beats paper";
         } 
     }
         
         else if(playerSelection === "scissors"){
             switch(computerPlay()){
                 case "rock": 
-                    console.log("rock beats scissors");
+                    computerScore++;
+                    return "YOU LOSE! Rock beats scissors";
                     break;
                 case "paper":
-                    console.log("drawscissors beats paper");
+                    playerScore++;
+                    return "YOU WIN! Scissors beats paper";
                     break;
                 case "scissors":
-                    console.log("draw");
+                    return "draw";
             }
     
         } else {
-            console.log("invalid option");
+            return "invalid option";
         }
-     
+}
 
+let game = function(){
+    while(playerScore < 5 && computerScore < 5){
+        let result = playRound()
+        console.log(result);
+    } if(playerScore === 5){
+        return "Congrats you win!!!"
+    } else if (computerPlay === 5){
+        return "YOU LOSE"
+    }
 }
