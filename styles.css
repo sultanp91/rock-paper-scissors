@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 70rem;
+    width: 50rem;
+    background-color: indianred;
+    margin-top: 10vh;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3em;
+    border-bottom-right-radius: 6rem;
+}
+
+.scoreboard{
+    height: 45%;
+    width: 90%;
+    padding: 2rem;
+    margin: 2rem auto;
+    background-color: gray;
+    border-radius: 1rem;
+
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 6rem;
+    font-weight: 800;
+    color: sienna;
+    text-align: center;
+    background-color: darkgrey; 
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    color: sienna;
+    text-align: center;
+    background-color: darkgrey;
+    margin-top: 1rem;
+    padding: 1.5rem;
+}
+
+h4{
+    font-family: Pretendo, Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+.inputbuttons {
+    display: flex;
+}
+
+.btn {
+    width: 30%;
+    height: 40%;
+
+}
+
+.resetbutton {
+    display: block;
+    width: 90%;
+    height: 20%;
+}

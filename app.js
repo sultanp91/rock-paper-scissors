@@ -23,15 +23,22 @@ let gameOver = false;
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
+const resetButton = document.querySelector("#reset");
 
 let playerDisplay = document.querySelector("#playerdisplay");
 let computerDisplay = document.querySelector("#computerdisplay");
 
 let displayScore = () => {
-
     playerDisplay.textContent = playerScore;
     computerDisplay.textContent = computerScore;
 }
+
+resetButton.addEventListener("click", () => {
+    playerScore = 0;
+    computerScore = 0;
+    gameOver = false;
+    displayScore();
+})
 
 rock.addEventListener("click", (e) => {
         
@@ -43,20 +50,31 @@ rock.addEventListener("click", (e) => {
             } else if(computerScore > 4){
                 gameOver = true;
             }
-        }
-
-    
-    
+        }   
 });
 
 paper.addEventListener("click", (e) => {
-    console.log(playRound(`${e.target.id}`));
-    displayScore();
+    if(!gameOver){
+        console.log(playRound(`${e.target.id}`));
+        displayScore();
+        if(playerScore > 4){
+            gameOver = true;
+        } else if(computerScore > 4){
+            gameOver = true;
+        }
+    }  
 });
 
 scissors.addEventListener("click", (e) =>{
-    console.log(playRound(`${e.target.id}`));
-    displayScore();
+    if(!gameOver){
+        console.log(playRound(`${e.target.id}`));
+        displayScore();
+        if(playerScore > 4){
+            gameOver = true;
+        } else if(computerScore > 4){
+            gameOver = true;
+        }
+    }  
 });
 
 

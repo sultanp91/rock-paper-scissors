@@ -10,21 +10,40 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <style>@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');</style>
+        <link rel="stylesheet" href="styles.css">
+        <link href="//db.onlinewebfonts.com/c/487390d5558cff7a17ce35d7d92a0540?family=Pretendo" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <div class="container">
+
         <div class="scoreboard">
             <h2 ><span id="playerdisplay">0</span>-<span id="computerdisplay">0</span></h2>
-        </div>
-            
 
-        <button id="rock" value="rock">ROCK</button>
-        <button id="paper">PAPER</button>
-        <button id="scissors">SCISSORS</button>
+        <div>
+            <h3 id="gamestatus">Rock, Paper, Scissors!</h3>
+        </div>
+
+        <div>
+            <h4>JAVASCRIPTBOY</h3>
+        </div>
+
+    </div>
+
+            
+        <div class="inputbuttons">
+            <button class="btn" id="rock">ROCK</button>
+            <button class="btn" id="paper">PAPER</button>
+            <button class="btn" id="scissors">SCISSORS</button>
+        </div>
+       
+        <div class="resetcontainer">
+            <button id="reset">Reset</button>
+        </div>
+        
     </div>
         <script src="app.js" async defer></script>
     </body>
