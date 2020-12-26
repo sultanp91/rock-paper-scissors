@@ -22,7 +22,7 @@ body {
     border-top-right-radius: 3rem;
     border-top-left-radius: 3rem;
     border-bottom-left-radius: 3em;
-    border-bottom-right-radius: 6rem;
+    border-bottom-right-radius: 8rem;
 }
 
 .scoreboard{
@@ -32,29 +32,33 @@ body {
     margin: 2rem auto;
     background-color: gray;
     border-radius: 1rem;
+}
 
+.score {
+    background-color: darkgrey; 
+    height: 45%;
 }
 
 h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 6rem;
     font-weight: 800;
-    color: sienna;
+    color: black;
     text-align: center;
-    background-color: darkgrey; 
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1.5rem;
 }
-
+.gamestatus {
+    background-color: darkgrey;
+    height: 45%;
+}
 h3 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 600;
     color: sienna;
     text-align: center;
-    background-color: darkgrey;
     margin-top: 1rem;
-    padding: 1.5rem;
+    padding-top: 2rem;
 }
 
 h4{
@@ -64,17 +68,43 @@ h4{
     font-size: 1.5rem;
 }
 .inputbuttons {
-    display: flex;
+    width: 95%;  
+    margin: auto;
+    padding-top: 6rem;
 }
 
 .btn {
-    width: 30%;
-    height: 40%;
+    width: 13rem;
+    height: 5rem;
+    margin: 1rem;
+    background-color: #d3cccc;
+    border-radius: 3rem;
+    outline: none;
+    box-shadow: 0px 10px 10px 5px rgba(0,0,0,0.4);
+    font-family: Audiowide;
+    
+}
+
+.btn:active,
+#reset:active{
+    box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.4);
 
 }
 
-.resetbutton {
-    display: block;
-    width: 90%;
-    height: 20%;
+.resetcontainer {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+#reset {
+    height: 7rem;
+    width: 40%;
+    background-color: #d3cccc;
+    border-radius: 3rem;
+    outline: none;
+    box-shadow: 0px 10px 10px 5px rgba(0,0,0,0.4);
+    font-family: Audiowide;
+    font-size: 2rem;
 }
